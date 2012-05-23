@@ -4,3 +4,8 @@
 ## Node.js modules
 
     npm install colors
+
+
+## Misc commands
+
+    netstat -tapn
