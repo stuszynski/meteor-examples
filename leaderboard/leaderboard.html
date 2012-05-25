@@ -10,6 +10,7 @@
 
 <template name="leaderboard">
   <div class="leaderboard">
+    {{> header}}
     {{#each players}}
       {{> player}}
     {{/each}}
@@ -18,18 +19,38 @@
   {{#if selected_name}}
   <div class="details">
     <div class="name">{{selected_name}}</div>
-    <input type="button" class="inc" value="Give 5 points" />
+    <input type="button" class="inc" value="Give 5 points">
   </div>
   {{/if}}
 
   {{#unless selected_name}}
   <div class="none">Click a player to select</div>
   {{/unless}}
+
+  <div class="details">
+    <div class="name">Add new scientist</div>
+    <input type="text" class="scientist" value="">
+    <input type="button" class="add" value="Add">
+  </div>
+
+  <div class="details">
+    <div class="name">Reset everyone’s score</div>
+    <input type="button" class="reset" value="Reset">
+  </div>
+
 </template>
 
 <template name="player">
-  <div class="player {{selected}}">
+  <div class="player{{selected}}">
+    <span class="delete">⊗</span>
     <span class="name">{{name}}</span>
     <span class="score">{{score}}</span>
+  </div>
+</template>
+
+<template name="header">
+  <div id="header" class="player">
+    <span class="name">name</span>
+    <span class="score">score</span>
   </div>
 </template>

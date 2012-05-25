@@ -12,7 +12,7 @@ body {
 
 #outer {
     width: 600px;
-    margin: 0 auto;    
+    margin: 0 auto;
 }
 
 .player {
@@ -33,6 +33,13 @@ body {
     font-size: 2em;
     font-weight: bold;
     color: #777;
+}
+
+.player .delete {
+    display: inline-block;
+    font-size: 2em;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
 }
 
 .player.selected {
@@ -58,5 +65,14 @@ body {
 }
 
 .inc {
-  cursor: pointer;
+    cursor: pointer;
+}
+
+#header {
+    background-color: #DDD;
+}
+
+#header .name, #header .score {
+    color: #AA0;
+    font-weight: bold;
 }
