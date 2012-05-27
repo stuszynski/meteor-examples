@@ -7,4 +7,3 @@ Meteor.publish('lists', function () {
 Meteor.publish('todos', function (list_id) {
   return Todos.find({list_id: list_id});
 });
-
