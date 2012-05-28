@@ -1,0 +1,61 @@
+<template name="sidebar">
+  <div class="well sidebar-nav">
+    <ul class="nav nav-list">
+    {{#each categories}}
+      <li><a href="#">{{this}}</a></li>
+    {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="articles">
+  {{#each articles}}
+    {{> article}}
+  {{/each}}
+</template>
+
+<template name="article">
+  <article class="row-fluid">
+    <header class="span10">
+      <h3>{{header}}</h3>
+    </header>
+    <div class="span2">
+      <p><a class="btn" href="#">Delete</a>
+    </div>
+    <div class="description">
+      {{description}}
+    </div>
+  </article>
+</template>
+
+<template name="about">
+  <div class="span4">
+    <p><a class="btn btn-primary btn-large">New Formula</a>
+  </div>
+  <div class="span8 about">
+    <p>A personal notebook of non-obvious-formulas
+  </div>
+</template>
+
+<template name="navbar">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/">MathFormulas</a>
+      <nav class="nav-collapse">
+        <ul class="nav">
+          <li><a href="http://www.mathjax.org/">MathJax</a>
+          <li><a href="http://www.mathjax.org/docs/2.0/index.html">Docs</a>
+          <li><a href="http://tug.org/">TeX User Group</a>
+          <li><a href="http://lesscss.org/">Less</a>
+          <li><a href="http://twitter.github.com/bootstrap/less.html">Bootstrap</a>
+          <li><a href="http://underscorejs.org/">Underscore</a>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</template>
